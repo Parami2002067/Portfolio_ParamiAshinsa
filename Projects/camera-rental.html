@@ -249,7 +249,7 @@
     </tr>
 
 </table>
-<br>
+<br><br>
 
 <div class="block">
     <h2>Non-Functional Requirements</h2>
@@ -259,10 +259,171 @@
                 <th>Requirement category</th>
                 <th>Requirement</th>
             </tr>
+
+            <tr>
+                <td>NFR-01</td>
+                <td>Usability</td>
+                <td>User shall be able to complete the registration within 3 steps</td>
+            </tr>
+
+            <tr>
+                <td>NFR-02</td>
+                <td>Performance</td>
+                <td>Pages shall load within 5 seconds</td>
+            </tr>
+
+            <tr>
+                <td>NFR-03</td>
+                <td>Security</td>
+                <td>Password shall be encrypted before storage</td>
+            </tr>
+
+            <tr>
+                <td>NFR-04</td>
+                <td>Usability</td>
+                <td>User shall be able to complete the booking in 5 steps</td>
+            </tr>
+
+            <tr>
+                <td>NFR-05</td>
+                <td>Security</td>
+                <td>Only authenticated users can access bookings</td>
+            </tr>
+
+            <tr>
+                <td>NFR-06</td>
+                <td>Availability</td>
+                <td>System shall be available 24/7</td>
+            </tr>
+
+            <tr>
+                <td>NFR-07</td>
+                <td>Performance</td>
+                <td>Booking requests shall process within 5 seconds</td>
+            </tr>
+
+             <tr>
+                <td>NFR-08</td>
+                <td>Performance</td>
+                <td>The system shall display booking confirmation within 5 seconds of successful booking submission</td>
+            </tr>
+
+            <tr>
+                <td>NFR-09</td>
+                <td>Reliability</td>
+                <td>The system shall perform automated database backups every 72 hours</td>
+            </tr>
+
+            <tr>
+                <td>NFR-10</td>
+                <td>Performance</td>
+                <td>Stored data shall be retrieved within 5 seconds</td>
+            </tr>
+
+             <tr>
+                <td>NFR-11</td>
+                <td>Performance</td>
+                <td>Report shall be generated within 10 seconds</td>
+            </tr>
+
+
         </table>
     </div>
 
-    <!-- 5. USE CASE DIAGRAM -->
+    <!-- 5. USE CASE SCENARIOS -->
+    <div class="block">
+        <h1>User Stories</h1>
+
+        
+        <ul>
+            <li>As a customer, I want to create a user account as I can access to system and it’s services </li>
+            <li>As a customer, I want to log in to the system as I can access booking and account management features</li>
+            <li>As a customer, I want to search for cameras by category so that I can quickly find equipment that matches my needs.</li>
+            <li>As a customer, I want to book equipment through the system so that reserve equipment quickly and conveniently</li>
+            <li>As a customer, I want to cancel bookings so that I can modify or correct my reservation when necessary.</li>
+            <li>As a customer, I want to view my rental history so that I can track my previous rentals and bookings</li>
+            <li>As a customer, I want to edit profile so that my account details remain accurate and up to date</li>
+            <li>As a customer, I want to view camera details so that I can compare available equipment before making a booking</li>
+            <li>As a customer, I want to check equipment availability so that I can book only available items</li>
+            <li>As a customer, I want to log out of the system so that my account remains secure when using shared devices</li>
+            <li>As an administrator, I want to add new equipment so that customers can view newly available rental items</li>
+            <li>As an administrator, I want to update equipment details so that details remain accurate and up to date</li>
+            <li>As an administrator, I want to manage bookings so that rental operations remain organized</li>
+            <li>As an administrator, I want to view rent history so that I can monitor customer rentals and manage rental records effectively</li>
+            <li>As an administrator, I want to remove equipment from the inventory so that customers can view up to date and available equipment details only</li>
+        </ul>
+    </div>
+
+     <!-- 6. BUSINESS RULES -->
+    <div class="block">
+        <h2>Business Rules</h2>
+
+    <table class="ba-table">
+
+        <tr>
+            <th>ID</th>
+            <th>Business Rule</th>
+        </tr>
+
+        <tr>
+            <td>BR-01</td>
+            <td>Users must register and authenticate before accessing protected system features</td>
+        </tr>
+
+        <tr>
+            <td>BR-02</td>
+            <td>Each user must register with a unique email address and username</td>
+        </tr>
+
+        <tr>
+            <td>BR-03</td>
+            <td>The password must contain at least 8 characters including letters, numbers and symbols</td>
+        </tr>
+
+        <tr>
+            <td>BR-04</td>
+            <td>Users may only book equipment that is available for the selected rental period</td>
+        </tr>
+
+        <tr>
+            <td>BR-05</td>
+            <td>Only administrators can add, update or delete equipment</td>
+        </tr>
+
+        <tr>
+            <td>BR-06</td>
+            <td>Only administrators may generate monthly rental reports</td>
+        </tr>
+
+        <tr>
+            <td>BR-07</td>
+            <td>The rental end date must be later than the rental start date</td>
+        </tr>
+
+        <tr>
+            <td>BR-08</td>
+            <td>A customer may not have overlapping bookings for the same rental period</td>
+        </tr>
+
+        <tr>
+            <td>BR-09</td>
+            <td>Cancelled bookings shall release the equipment for future reservations</td>
+        </tr>
+
+        <tr>
+            <td>BR-10</td>
+            <td>Users may edit only their own profile information</td>
+        </tr>
+
+        <tr>
+            <td>BR-11</td>
+            <td>Deleted user accounts shall no longer be able to access the system</td>
+        </tr>
+
+</table>
+</div>
+
+    <!-- 7. USE CASE DIAGRAM -->
     <div class="block">
         <h2>Use Case Diagram</h2>
 
@@ -274,69 +435,137 @@
         </p>
     </div>
 
-    <!-- 6. USE CASE SCENARIOS -->
+    <!-- 6. USE CASE SPECIFICATIONS -->
+     <div class="block">
+        <h1>Use Case Specifications</h1>
+     </div>
     <div class="block">
-        <h2>Use Case Scenarios</h2>
+        <table class="ba-table">
+            <tr>
+                <td>Use Case ID</td>
+                <td>UC-01</td>
+            </tr>
 
-        <p><strong>Scenario 1: Rent Camera</strong></p>
-        <ul>
-            <li>User selects available camera</li>
-            <li>System checks availability</li>
-            <li>Booking is confirmed</li>
-        </ul>
+            <tr>
+                <td>Use Case Name</td>
+                <td>Create Account</td>
+            </tr>
 
-        <p><strong>Scenario 2: Return Camera</strong></p>
-        <ul>
-            <li>User returns camera</li>
-            <li>System updates inventory</li>
-            <li>Late fees calculated if needed</li>
-        </ul>
+            <tr>
+                <td>Primary Actor</td>
+                <td>Customer</td>
+            </tr>
+
+            <tr>
+                <td>Goal</td>
+                <td>Allow new user to create an account</td>
+            </tr>
+
+            <tr>
+                <td>Preconditions</td>
+                <td><ul><li>User is not already registered </li><li>User has internet access</li></ul></td>
+            </tr>
+
+            <tr>
+                <td>Trigger</td>
+                <td>User selects the create account option</td>
+            </tr>
+
+            <tr>
+                <td>Main Success Scenario</td>
+                <td>
+                    <table class="ba-table">
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>User selects the create account option</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td> System displays the user registration form</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td> User enters username</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td> User enters email address</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td> User enters password</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td> User enters confirm password</td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>System validates the inputs</td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>ystem checks whether the username is unique</td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>System checks whether the email address is unique</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td>System stores the user details</td>
+                        </tr>
+
+                        <tr>
+                            <td>11</td>
+                            <td>ystem displays account successfully created message</td>
+                        </tr>
+                    </table>
+
+                <tr>
+                    <td>Alternative flow</td>
+                    <td>8a. User name already exist<br>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays username already taken</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User enters another username</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Flow resumes at step4</td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <!-- 7. BUSINESS RULES -->
-    <div class="block">
-        <h2>Business Rules</h2>
-       <h3>Business Rules</h3>
-
-<table class="ba-table">
-
-    <tr>
-        <th>Rule ID</th>
-        <th>Business Rule</th>
-        <th>Description</th>
-    </tr>
-
-    <tr>
-        <td>BR-01</td>
-        <td>No Double Booking</td>
-        <td>A camera cannot be booked by multiple customers for the same time period.</td>
-    </tr>
-
-    <tr>
-        <td>BR-02</td>
-        <td>Registered Users Only</td>
-        <td>Only registered customers are allowed to rent cameras.</td>
-    </tr>
-
-    <tr>
-        <td>BR-03</td>
-        <td>Return Deadline Enforcement</td>
-        <td>All rentals must be returned within the agreed rental period.</td>
-    </tr>
-
-    <tr>
-        <td>BR-04</td>
-        <td>Late Fee Policy</td>
-        <td>Late returns are charged based on a predefined penalty rate.</td>
-    </tr>
-
-    <tr>
-        <td>BR-05</td>
-        <td>Admin Approval</td>
-        <td>High-value equipment rentals require admin approval before confirmation.</td>
-    </tr>
-
-</table>
+   
     </div>
 
 </section>
