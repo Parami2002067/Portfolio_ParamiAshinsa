@@ -6,7 +6,7 @@ It showcases my skills, projects, and case studies in Business Analysis, Data An
 ---
 
 ## 🚀 Live Demo
-https://parami2002067.github.io/portfolio/
+https://parami2002067.github.io/Portfolio_ParamiAshinsa/
 
 ---
 
