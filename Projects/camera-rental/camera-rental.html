@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera Rental Management System | Case Study</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="D:\Portfolio\css\styles.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <div class="logo">Parami<span>.</span></div>
+
+    <ul class="nav-links">
+        <li><a href="D:/Portfolio/index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+    </ul>
+</header>
+
+
+<!-- PROJECT HEADER -->
+<section class="project-hero">
+
+    <div class="project-title">
+        <h1>Camera Rental Management System</h1>
+        <p>Business Analysis Case Study</p>
+    </div>
+
+</section>
+
+
+<!-- CONTENT -->
+<section class="project-details">
+
+    <!-- 1. OVERVIEW -->
+    <div class="block">
+        <h2>Project Overview</h2>
+        <p>
+            Camera Rental Management System is a Business Analysis project designed
+            to digitize and improve the manual camera rental process by managing
+            inventory, bookings, customers, and returns efficiently.
+        </p>
+    </div>
+
+    <!-- 2. PROBLEM -->
+    <div class="block">
+        <h2>Problem Statement</h2>
+        <p>
+            Manual rental systems often cause booking conflicts, poor tracking of
+            available equipment, and inefficient customer management, leading to
+            operational delays and loss of revenue.
+        </p>
+    </div>
+
+    <!-- 3. STAKEHOLDERS -->
+    <div class="block">
+        <h2>Stakeholders & Scope</h2>
+        <ul>
+            <li>Admin / System Owner</li>
+            <li>Customers (Renters)</li>
+            <li>Inventory Manager</li>
+        </ul>
+    </div>
+
+    <!-- 4. REQUIREMENTS -->
+    <div class="block">
+        <h2>Requirements</h2>
+
+        <h3>Functional Requirements</h3>
+
+<table class="ba-table">
+
+    <tr>
+        <th>ID</th>
+        <th>Requirement</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>FR-01</td>
+        <td>Manage Camera Inventory</td>
+        <td>System allows admin to add, update, and remove camera equipment details.</td>
+    </tr>
+
+    <tr>
+        <td>FR-02</td>
+        <td>Customer Registration</td>
+        <td>System allows users to register and maintain customer profiles.</td>
+    </tr>
+
+    <tr>
+        <td>FR-03</td>
+        <td>Camera Booking</td>
+        <td>Customers can check availability and book cameras for selected dates.</td>
+    </tr>
+
+    <tr>
+        <td>FR-04</td>
+        <td>Return Management</td>
+        <td>System records camera returns and updates inventory status.</td>
+    </tr>
+
+    <tr>
+        <td>FR-05</td>
+        <td>Penalty Calculation</td>
+        <td>System calculates late return charges based on rental duration rules.</td>
+    </tr>
+
+</table>
+
+        <h3>Non-Functional Requirements</h3>
+        <ul>
+            <li>System should respond within 2 seconds</li>
+            <li>Secure login for admin access</li>
+            <li>High availability during business hours</li>
+            <li>User-friendly interface</li>
+        </ul>
+    </div>
+
+    <!-- 5. USE CASE DIAGRAM -->
+    <div class="block">
+        <h2>Use Case Diagram</h2>
+
+        <img src="D:\Portfolio\Projects\camera-rental\UseCaseDiagram.png" alt="Use Case Diagram"
+             style="width:100%; border-radius:10px; margin-top:10px;">
+
+        <p style="color:#B8C5D6; font-size:14px;">
+            Figure: Camera Rental System Use Case Diagram
+        </p>
+    </div>
+
+    <!-- 6. USE CASE SCENARIOS -->
+    <div class="block">
+        <h2>Use Case Scenarios</h2>
+
+        <p><strong>Scenario 1: Rent Camera</strong></p>
+        <ul>
+            <li>User selects available camera</li>
+            <li>System checks availability</li>
+            <li>Booking is confirmed</li>
+        </ul>
+
+        <p><strong>Scenario 2: Return Camera</strong></p>
+        <ul>
+            <li>User returns camera</li>
+            <li>System updates inventory</li>
+            <li>Late fees calculated if needed</li>
+        </ul>
+    </div>
+
+    <!-- 7. BUSINESS RULES -->
+    <div class="block">
+        <h2>Business Rules</h2>
+       <h3>Business Rules</h3>
+
+<table class="ba-table">
+
+    <tr>
+        <th>Rule ID</th>
+        <th>Business Rule</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>BR-01</td>
+        <td>No Double Booking</td>
+        <td>A camera cannot be booked by multiple customers for the same time period.</td>
+    </tr>
+
+    <tr>
+        <td>BR-02</td>
+        <td>Registered Users Only</td>
+        <td>Only registered customers are allowed to rent cameras.</td>
+    </tr>
+
+    <tr>
+        <td>BR-03</td>
+        <td>Return Deadline Enforcement</td>
+        <td>All rentals must be returned within the agreed rental period.</td>
+    </tr>
+
+    <tr>
+        <td>BR-04</td>
+        <td>Late Fee Policy</td>
+        <td>Late returns are charged based on a predefined penalty rate.</td>
+    </tr>
+
+    <tr>
+        <td>BR-05</td>
+        <td>Admin Approval</td>
+        <td>High-value equipment rentals require admin approval before confirmation.</td>
+    </tr>
+
+</table>
+    </div>
+
+</section>
+
+</body>
+</html>
