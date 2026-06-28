@@ -33,97 +33,240 @@
 
 <!-- CONTENT -->
 <section class="project-details">
-
-    <!-- 1. OVERVIEW -->
     <div class="block">
-        <h2>Project Overview</h2>
+        <h1>Executive Summery</h1>
+    </div>    
+
+     <div class="block">
+        <h2>Background</h2>
         <p>
-            Camera Rental Management System is a Business Analysis project designed
-            to digitize and improve the manual camera rental process by managing
-            inventory, bookings, customers, and returns efficiently.
+            Many customers face difficulties when renting cameras and related equipment due to limited 
+            visibility of available equipment, manual booking processes and lack of booking history management.
         </p>
     </div>
 
-    <!-- 2. PROBLEM -->
     <div class="block">
-        <h2>Problem Statement</h2>
+        <h2>Proposed Solution</h2>
         <p>
-            Manual rental systems often cause booking conflicts, poor tracking of
-            available equipment, and inefficient customer management, leading to
-            operational delays and loss of revenue.
+            A camera rental management system that enables users to browse 
+            available cameras, make bookings, track rental history, and manage reservations through a mobile application.
         </p>
     </div>
 
-    <!-- 3. STAKEHOLDERS -->
+      <div class="block">
+        <h2>Expected Benefits</h2>
+       <ul>
+            <li>Faster booking process</li>
+            <li>Improved user experience</li>
+            <li>Better inventory management</li>
+            <li>Reduced manual workload</li>
+       </ul>
+    </div>
+
     <div class="block">
-        <h2>Stakeholders & Scope</h2>
+        <h1>Business Problem</h1>
+    </div>
+
+    <!-- 1. Current challenges -->
+    <div class="block">   
+        <h2>Current Challenges</h2>
         <ul>
-            <li>Admin / System Owner</li>
-            <li>Customers (Renters)</li>
-            <li>Inventory Manager</li>
+            <li>Customers need to contact the renter manually</li>
+            <li>Availability information is difficult to update and track</li>
+            <li>Rental records are difficult to track</li>
+            <li>Booking conflicts may occur</li>
         </ul>
     </div>
 
-    <!-- 4. REQUIREMENTS -->
+    <!-- 2. Impact-->
     <div class="block">
-        <h2>Requirements</h2>
+        <h2>Impact</h2>
+        <ul>
+            <li>Time consuming  operations</li>
+            <li>Risks in managing bookings</li>
+            <li>Customer dissatisfaction</li>
+        </ul>
+    </div>
 
-        <h3>Functional Requirements</h3>
+    
+
+    <!-- 3. STAKEHOLDERS -->
+    <div class="block">
+        <h1>Stakeholder Analysis</h1>
+    </div>
+
+    <table class="ba-table">
+        <tr>
+            <th>Stakeholder</th>
+            <th>Role</th>
+        <th>Interest</th>
+        </tr>
+
+        <tr>
+            <td>Rental shop owner</td>
+            <td>Business owner</td>
+            <td><ul><li>Easy management of bookings </li><li>Increased revenue </li></ul></td>
+        </tr>
+
+        <tr>
+            <td>Admin</td>
+            <td>Manage the system</td>
+            <td><ul><li>Efficient operations </li></ul></td>
+        </tr>
+
+        <tr>
+            <td>Customers</td>
+            <td>Rent cameras and other relevant equipment</td>
+            <td><ul><li>Easy booking</li></ul></td>
+        </tr>
+
+    </table>
+    <br>  
+
+    <!-- 4. REQUIREMENTS -->
+
+    <div class="block">
+        <h1>Requirements</h1>
+    </div>
+    <div class="block">
+        <h2>Functional Requirements</h2>
 
 <table class="ba-table">
 
     <tr>
         <th>ID</th>
         <th>Requirement</th>
-        <th>Description</th>
     </tr>
 
     <tr>
         <td>FR-01</td>
-        <td>Manage Camera Inventory</td>
-        <td>System allows admin to add, update, and remove camera equipment details.</td>
+        <td>User registration</td>
     </tr>
 
-    <tr>
+     <tr>
         <td>FR-02</td>
-        <td>Customer Registration</td>
-        <td>System allows users to register and maintain customer profiles.</td>
+        <td>Validate user data</td>
     </tr>
 
     <tr>
         <td>FR-03</td>
-        <td>Camera Booking</td>
-        <td>Customers can check availability and book cameras for selected dates.</td>
+        <td>Creates user account</td>
     </tr>
 
     <tr>
         <td>FR-04</td>
-        <td>Return Management</td>
-        <td>System records camera returns and updates inventory status.</td>
+        <td>User login</td>
     </tr>
 
     <tr>
         <td>FR-05</td>
-        <td>Penalty Calculation</td>
-        <td>System calculates late return charges based on rental duration rules.</td>
+        <td>Validates user login data</td>
+    </tr>
+
+    <tr>
+        <td>FR-06</td>
+        <td>Redirect to home screen</td>
+    </tr>
+
+    <tr>
+        <td>FR-07</td>
+        <td>View camera and relevant equipment</td>
+    </tr>
+
+    <tr>
+        <td>FR-08</td>
+        <td>Check for availability of the equipment</td>
+    </tr>
+
+    <tr>
+        <td>FR-09</td>
+        <td>Search cameras and other equipment</td>
+    </tr>
+
+    <tr>
+        <td>FR-10</td>
+        <td>Allow user to book an equipment</td>
+    </tr>
+
+     <tr>
+        <td>FR-11</td>
+        <td>Booking successful notification</td>
+    </tr>
+
+     <tr>
+        <td>FR-12</td>
+        <td>Save booking information in the database</td>
+    </tr>
+
+    <tr>
+        <td>FR-13</td>
+        <td>Cancel booking</td>
+    </tr>
+
+    <tr>
+        <td>FR-14</td>
+        <td>View rental history</td>
+    </tr>
+
+    <tr>
+        <td>FR-15</td>
+        <td>Manage user profile</td>
+    </tr>
+
+    <tr>
+        <td>FR-16</td>
+        <td>Add camera and other equipment</td>
+    </tr>
+
+     <tr>
+        <td>FR-17</td>
+        <td>Update equipment information</td>
+    </tr>
+
+    <tr>
+        <td>FR-18</td>
+        <td>Delete equipment information</td>
+    </tr>
+
+    <tr>
+        <td>FR-19</td>
+        <td>Generate reports</td>
+    </tr>
+
+    <tr>
+        <td>FR-20</td>
+        <td>User profile edit</td>
+    </tr>
+
+    <tr>
+        <td>FR-21</td>
+        <td>Delete user profile</td>
+    </tr>
+
+    <tr>
+        <td>FR-22</td>
+        <td>User logout</td>
     </tr>
 
 </table>
+<br>
 
-        <h3>Non-Functional Requirements</h3>
-        <ul>
-            <li>System should respond within 2 seconds</li>
-            <li>Secure login for admin access</li>
-            <li>High availability during business hours</li>
-            <li>User-friendly interface</li>
-        </ul>
+<div class="block">
+    <h2>Non-Functional Requirements</h2>
+        <table class="ba-table">
+            <tr>
+                <th>ID</th>
+                <th>Requirement category</th>
+                <th>Requirement</th>
+            </tr>
+        </table>
     </div>
 
     <!-- 5. USE CASE DIAGRAM -->
     <div class="block">
         <h2>Use Case Diagram</h2>
 
-        <img src="D:\Portfolio\Projects\camera-rental\UseCaseDiagram.png" alt="Use Case Diagram"
+        <img src="../images/UseCaseDiagram.png" alt="Use Case Diagram"
              style="width:100%; border-radius:10px; margin-top:10px;">
 
         <p style="color:#B8C5D6; font-size:14px;">

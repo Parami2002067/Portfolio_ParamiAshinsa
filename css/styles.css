@@ -50,6 +50,17 @@ body{
 
 }
 
+/* ==========================
+        HAMBURGER
+========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
 .logo{
 
     font-size:28px;
@@ -890,4 +901,121 @@ body::after{
 
 .excel-image img:hover{
     transform:scale(1.02);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1024px) {
+  
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+    /* ==========================
+        HERO
+========================== */
+
+.hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+    padding:120px 8% 60px;
+
+    gap:40px;
+
+}
+.hero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+}
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+
+}
+
+/* ==========================
+        MOBILE NAV
+========================== */
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:18px 6%;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1001;
+    }
+
+    .nav-links{
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    width:100%;
+
+    background:#050816;
+
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+
+    overflow:hidden;
+
+    max-height:0;
+
+    opacity:0;
+
+    transition:
+        max-height .4s ease,
+        opacity .3s ease;
+
+}
+
+.nav-links.active{
+
+    max-height:400px;
+
+    opacity:1;
+
+    padding:30px 0;
+
+}
+
+.nav-links a{
+
+    width:100%;
+    text-align:center;
+    padding:12px 0;
+
+}
+
+.nav-links a:hover{
+
+    background:rgba(59,130,246,.12);
+
+}
+
 }
