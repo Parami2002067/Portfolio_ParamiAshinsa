@@ -356,7 +356,7 @@
 
      <!-- 6. BUSINESS RULES -->
     <div class="block">
-        <h2>Business Rules</h2>
+        <h1>Business Rules</h1>
 
     <table class="ba-table">
 
@@ -554,12 +554,57 @@
                             </tr>
                             <tr>
                                 <td>3</td>
+                                <td>Flow resumes at step3</td>
+                            </tr>
+                        </table>
+                        <p> 9a. Email address already exists </p>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays email address already taken</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User enters another email address</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
                                 <td>Flow resumes at step4</td>
                             </tr>
                         </table>
-
                     </td>
                 </tr>
+                <tr>
+                    <td>Exceptional flow</td>
+                    <td>6a. Empty fileds<br>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays validatiom error</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Registration is cancelled until corrected</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Post conditions</td>
+                    <td><ul><li>A new account is created.</li><li>User information is stored.</li></ul></td>
+                </tr>
+                <tr>
+                    <td>Related Functional Requirement</td>
+                    <td>FR-03</td>
+                </tr>    
                 </td>
             </tr>
         </table>
@@ -569,6 +614,33 @@
     </div>
 
 </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h3>Parami Ashinsa</h3>
+
+        <p>
+            ICT Undergraduate | Aspiring Business & Data Analyst
+        </p>
+
+        <div class="footer-socials">
+
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
