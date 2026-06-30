@@ -613,6 +613,308 @@
    
     </div>
 
+    <!--Use Case Specification 2-->
+
+<div class="block">
+        <table class="ba-table">
+            <tr>
+                <td>Use Case ID</td>
+                <td>UC-02</td>
+            </tr>
+
+            <tr>
+                <td>Use Case Name</td>
+                <td>User Log in</td>
+            </tr>
+
+            <tr>
+                <td>Primary Actor</td>
+                <td>Customer</td>
+            </tr>
+
+            <tr>
+                <td>Goal</td>
+                <td>Allow a user to access system features</td>
+            </tr>
+
+            <tr>
+                <td>Preconditions</td>
+                <td><ul><li>User has a registered and active account</li>
+                    <li>User has internet access</li>
+                    <li>The login page is available</li>
+                </ul></td>
+            </tr>
+
+            <tr>
+                <td>Trigger</td>
+                <td>User selects the log in option</td>
+            </tr>
+
+            <tr>
+                <td>Main Success Scenario</td>
+                <td>
+                    <table class="ba-table">
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>User selects log in option</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td> System displays the log in page</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td> User enters username or email</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td> User enters password</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td> User submits the log in form</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>System validates the inputs</td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>System authenticate the user</td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>System redirects the user to the dashboard/home page</td>
+                        </tr>
+                    </table>
+
+                <tr>
+                    <td>Alternative flow</td>
+                    <td>3a. User name already exist<br>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays an error message</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User enters a valid username/email</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Flow resumes at step4</td>
+                            </tr>
+                        </table>
+                        <p> 3a. Incorrect password</p>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays incorrect password</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User enters another password</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Flow resumes at step4</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Exceptional flow</td>
+                    <td>4a. Empty required fileds<br>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays validatiom error</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User corrects the missing fields</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Flow resumes at Step 3</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Post conditions</td>
+                    <td>User is successfully authenticated and granted access to the system</td>
+                </tr>
+                <tr>
+                    <td>Related Functional Requirement</td>
+                    <td>FR-04</td>
+                </tr>    
+                </td>
+            </tr>
+        </table>
+    </div>
+
+   
+    </div>
+
+        <!--Use Case Specification 3-->
+
+<div class="block">
+        <table class="ba-table">
+            <tr>
+                <td>Use Case ID</td>
+                <td>UC-03</td>
+            </tr>
+
+            <tr>
+                <td>Use Case Name</td>
+                <td>Search equipment</td>
+            </tr>
+
+            <tr>
+                <td>Primary Actor</td>
+                <td>Customer</td>
+            </tr>
+
+            <tr>
+                <td>Goal</td>
+                <td>Allow a customer to search for equipment based on keyword</td>
+            </tr>
+
+            <tr>
+                <td>Preconditions</td>
+                <td><ul><li>User has an active account</li>
+                    <li>User is logged in</li>
+                    <li>User has internet access</li>
+                </ul></td>
+            </tr>
+
+            <tr>
+                <td>Trigger</td>
+                <td>User selects search option</td>
+            </tr>
+
+            <tr>
+                <td>Main Success Scenario</td>
+                <td>
+                    <table class="ba-table">
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>User selects search option</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>System displays the search screen</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td> User enters keyword</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>System searches the equipment database using the entered keyword</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>System displays the matching equipment list</td>
+                        </tr>
+                    </table>
+
+                <tr>
+                    <td>Alternative flow</td>
+                    <td>4a.No matching result found<br>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays no matching equipment found</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User enters another keyword</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Flow resumes at step4</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Exceptional flow</td>
+                    <td>4a. Empty search fileds<br>
+                        <table class="ba-table">
+                            <tr>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>System displays validation message prompting the user to enter a keyword</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User enters a keyword</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Flow resumes at Step4</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Post conditions</td>
+                    <td>User successfully views the search results</td>
+                </tr>
+                <tr>
+                    <td>Related Functional Requirement</td>
+                    <td>FR-04</td>
+                </tr>    
+                </td>
+            </tr>
+        </table>
+    </div>
+
+   
+    </div>
+
 </section>
 
 <!-- ================= FOOTER ================= -->
