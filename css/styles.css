@@ -1079,6 +1079,36 @@ body::after{
     color:white;
 }
 
+.tech-list span{
+
+    padding:8px 14px;
+
+    background:#10162F;
+
+    border:1px solid #1E293B;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    color:#B8C5D6;
+
+    transition:.3s;
+
+}
+
+.tech-list span:hover{
+
+    border-color:#3B82F6;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 15px rgba(59,130,246,.15);
+
+}
+
 /* ==========================
         CONTACT
 ========================== */

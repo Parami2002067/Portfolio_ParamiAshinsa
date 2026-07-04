@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera Rental Management System | Case Study</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <div class="logo">Parami<span>.</span></div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+    </ul>
+</header>
+
+
+<!-- PROJECT HEADER -->
+<section class="project-hero">
+
+    <div class="project-title">
+
+        <h1>Retail Sales Analytics Database</h1>
+
+        <p>Database Design | SQL | Business Analysis</p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTENT -->
+<section class="project-details">
+
+<div class="block">
+
+<h2>Project Overview</h2>
+
+<p>
+
+The Retail Sales Analytics Database is a relational database designed to
+manage retail sales information efficiently. The database organizes
+customers, products, orders, and order details while minimizing
+redundancy through normalization.
+
+This project demonstrates database design principles, documentation
+standards, and preparation for future analytical reporting using SQL
+and Power BI.
+
+</p>
+
+</div>
+
+
+<!--Project Objectives-->
+<div class="block">
+    <h2>Project Objectives</h2>
+
+    <ul>
+        <li>Store customer information.</li>
+        <li>Manage product information.</li>
+        <li>Record customer orders.</li>
+        <li>Store product-level sales transactions.</li>
+        <li>Support future reporting and analytics.</li>
+    </ul>
+</div>
+
+<!--Database structure-->
+
+<div class="block">
+
+    <h2>Database Structure</h2>
+
+    <p>
+        The database consists of four normalized tables designed to
+        manage customers, products, orders, and order details while
+        maintaining referential integrity.
+    </p>
+
+    <div class="excel-image">
+        <img src="../images/TableDetailsSQL.png"
+             alt="Retail Sales Database Schema">
+    </div>
+
+</div>
+
+<!--Table Summery-->
+<div class="block">
+    <h2>Table Summery</h2>
+    <table class="ba-table">
+        <tr>
+            <th>Table</th>
+            <th>Purpose</th>
+            <th>Primary key</th>
+        </tr>
+        <tr>
+            <td>Customer</td>
+            <td>Store customer information</td>
+            <td>Customer_ID</td>
+        </tr>
+        <tr>
+            <td>Product</td>
+            <td>Store product information</td>
+            <td>Product_ID</td>
+        </tr>
+        <tr>
+            <td>Orders</td>
+            <td>Stores order details and shipping information</td>
+            <td>Order_ID</td>
+        </tr>
+        <tr>
+            <td>Order_Details</td>
+            <td>Stores individual products within each order</td>
+            <td>OderDetaild_ID</td>
+        </tr>
+    </table>
+</div>
+
+<!--Relationship description-->
+<div class="block">
+    <h2>Relationship description</h2><br>
+    <h4>1. Customer → Orders</h4>
+    <ul>
+        <li>One customer can place multiple orders.</li>
+        <li>Each order belongs to one customer.</li>
+    </ul><br>
+    <h4>2. Orders → Order_Detail</h4>
+    <ul>
+        <li>One order can contain multiple products.</li>
+        <li>Each product in an order is stored as a separate record.</li>
+    </ul><br>
+    <h4>3. Product → Order_Detail</h4>
+    <ul>
+        <li>One product can appear in many orders.</li>
+    </ul>
+</div>
+
+<!--norma;ization-->
+<div class="block">
+    <h2>Normalization</h2>
+    <p>
+        The database was normalized to Third Normal Form (3NF) to eliminate redundant data, 
+        maintain consistency, and improve update efficiency. Customer, Product, Order, and Order 
+        Detail information are stored in separate tables linked through primary and foreign keys.
+    </p>
+</div>
+
+<!--Constraints-->
+<div class="block">
+    <h2>Constraints</h2>
+    <ul>
+        <li>Primary keys uniquely identify each record.</li>
+        <li>Foreign keys maintain referential integrity.</li>
+        <li>Mandatory fields are defined using NOT NULL constraints</li>
+    </ul>
+</div>
+
+<!--Data dictionary-->
+    <div class="block">
+        <h2>Data Dictionary</h2>
+
+        <p>The data dictionary defines the structure of the Retail Sales Analytics
+        database by documenting each table, attribute, data type, key constraints, 
+        and business meaning. It serves as a reference for developers, analysts, and 
+        stakeholders to ensure consistency and data integrity.</p>
+
+        <table class="ba-table">
+
+            <tr>
+                <th>Table</th>
+                <th>Column</th>
+                <th>Data Type</th>
+                <th>PK/FK</th>
+                <th>nullable?</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td>Customer</td>
+                <td>Customer_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>PK</td>
+                <td>No</td>
+                <td>Unique customer identifier</td>
+            </tr>
+
+            <tr>
+                <td>Customer</td>
+                <td>Customer_Name</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Customer's full name</td>    
+            </tr>
+
+            <tr>
+                <td>Customer</td>
+                <td>Segment</td>
+                <td>VARCHAR(50)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>The segment which customer belongs</td>
+            </tr>
+
+            <tr>
+                <td>Product</td>
+                <td>Product_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>PK</td>
+                <td>No</td>
+                <td>Unique product identifier</td>
+            </tr>
+
+            <tr>
+                <td>Product</td>
+                <td>Product_Name</td>
+                <td>VARCHAR(200)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Product’s name</td>
+            </tr>
+
+        </table>
+    </div><br>
+    <!--Technologies-->
+
+    <div class="block">
+
+    <h2>Technologies & Skills</h2>
+
+    <p>
+        The following tools and concepts were used during the design and documentation
+        of the Retail Sales Analytics Database.
+    </p><br>
+
+    <h3>Tools</h3>
+
+    <div class="tech-list">
+
+        <span>MySQL</span>
+        <span>SQL</span>
+        <span>Draw.io</span>
+
+    </div>
+
+    <br>
+
+    <h3>Database Concepts</h3>
+
+    <div class="tech-list">
+
+        <span>Relational Database Design</span>
+        <span>Data Modeling</span>
+        <span>Database Specification</span>
+        <span>Data Dictionary</span>
+        <span>Normalization (3NF)</span>
+        <span>Primary Keys</span>
+        <span>Foreign Keys</span>
+        <span>Referential Integrity</span>
+
+    </div>
+
+</div>
+
+        <!-- 1. Current progress -->
+    <div class="block">
+
+<h2>Current Progress</h2>
+
+<ul>
+
+<li>✔ Database Specification</li>
+
+<li>✔ Data Dictionary</li>
+
+<li>🔄 Entity Relationship Design</li>
+
+<li>🔄 SQL Table Creation</li>
+
+<li>🔄 Sample Data Population</li>
+
+<li>⏳ SQL Queries</li>
+
+<li>⏳ Power BI Dashboard</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h3>Parami Ashinsa</h3>
+
+        <p>
+            ICT Undergraduate | Aspiring Business & Data Analyst
+        </p>
+
+        <div class="footer-socials">
+
+            <a href="https://www.linkedin.com/in/paramiashinsa" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Parami2002067"><i class="fab fa-github"></i></a>
+            <a href="mailto:ashinsaparami2002@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
