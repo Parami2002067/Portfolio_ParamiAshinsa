@@ -1396,6 +1396,46 @@ body::after{
     color:white;
 
 }
+
+/*==========================
+    CREATIVE GALLERY
+==========================*/
+
+.creative-gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.creative-gallery img{
+
+    width:100%;
+
+    border-radius:15px;
+
+    border:1px solid #1E293B;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.creative-gallery img:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#3B82F6;
+
+    box-shadow:0 0 25px rgba(59,130,246,.2);
+
+}
 /* ==========================
         FOOTER
 ========================== */
