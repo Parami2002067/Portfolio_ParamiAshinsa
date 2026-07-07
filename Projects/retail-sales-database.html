@@ -39,7 +39,7 @@
 
 <div class="block">
 
-<h2>Project Overview</h2>
+<h1>Project Overview</h1>
 
 <p>
 
@@ -74,7 +74,7 @@ and Power BI.
 
 <div class="block">
 
-    <h2>Database Structure</h2>
+    <h1>Database Structure</h1>
 
     <p>
         The database consists of four normalized tables designed to
@@ -162,7 +162,7 @@ and Power BI.
 
 <!--Data dictionary-->
     <div class="block">
-        <h2>Data Dictionary</h2>
+        <h1>Data Dictionary</h1>
 
         <p>The data dictionary defines the structure of the Retail Sales Analytics
         database by documenting each table, attribute, data type, key constraints, 
@@ -227,11 +227,280 @@ and Power BI.
 
         </table>
     </div><br>
+
+    <!--ETL PROCESS-->
+    <!-- =========================
+     ETL PROCESS
+========================= -->
+
+<section class="etl-section">
+<div class="block">
+
+        <h1>ETL Process</h1>
+        
+    
+    <p>
+            The raw retail dataset was extracted from the Kaggle Superstore dataset,
+            validated for data quality issues, transformed into a normalized structure,
+            and finally loaded into the Retail Sales Analytics database.
+    </p><br>
+
+    <div class="etl-container">
+
+        <div class="etl-card">
+            <div class="etl-icon">📥</div>
+            <h3>Extract</h3>
+
+            <ul>
+                <li>Imported the Kaggle Superstore CSV into a staging table.</li>
+                <li>Preserved the original dataset without modifications.</li>
+                <li>Used the staging table as the source for all transformations.</li>
+            </ul>
+        </div><br>
+
+        <div class="etl-card">
+            <div class="etl-icon">🔍</div>
+
+            <h3>Validate</h3>
+
+            <ul>
+                <li>Checked duplicate Product IDs.</li>
+                <li>Verified missing values.</li>
+                <li>Validated Customer and Order identifiers.</li>
+                <li>Detected inconsistent Product ID → Product Name mappings.</li>
+            </ul>
+        </div><br>
+
+        <div class="etl-card">
+
+            <div class="etl-icon">⚙️</div>
+
+            <h3>Transform</h3>
+
+            <ul>
+                <li>Normalized the source dataset.</li>
+                <li>Separated Customer, Product, Orders and Order Detail entities.</li>
+                <li>Resolved duplicate Product IDs during loading.</li>
+                <li>Prepared the dataset for analytical queries.</li>
+            </ul>
+
+        </div><br>
+
+        <div class="etl-card">
+
+            <div class="etl-icon">💾</div>
+
+            <h3>Load</h3>
+
+            <ul>
+                <li>Loaded cleaned records into normalized tables.</li>
+                <li>Maintained primary and foreign key relationships.</li>
+                <li>Verified successful record insertion.</li>
+                <li>Prepared the database for business analytics.</li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+<!--quality-section-->
+
+<section class="quality-section">
+
+<div class="block">
+    <h2>Data Quality Validation</h2>
+
+    <div class="quality-card">
+
+        <br><h3>Validation Checks Performed</h3>
+
+        <ul>
+
+            <li>Duplicate Primary Key Detection</li>
+
+            <li>Null Value Validation</li>
+
+            <li>Product Consistency Verification</li>
+
+            <li>Record Count Verification</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</section>
+
+<!--sql-validation-->
+
+<div class="block">
+
+<section class="sql-validation-section">
+<div class="block">
+        <h2>SQL Validation Queries</h2>
+        <p>
+            SQL queries used to validate data quality, identify inconsistencies,
+            and ensure reliable database loading.
+        </p>
+   
+
+
+    <!-- Query Card 01 -->
+    <div class="sql-card">
+
+        <div class="sql-card-header">
+
+            <div>
+                <span class="query-number">01</span>
+                <h3>Duplicate Product ID Validation</h3>
+            </div>
+
+            <span class="query-type">Data Quality Check</span>
+
+        </div>
+
+
+        <p class="query-description">
+            Identifies duplicate product identifiers before inserting data
+            into the normalized product table.
+        </p>
+
+
+        <div class="code-container">
+
+            <div class="code-header">
+                <span>SQL</span>
+            </div>
+
+
+<pre>
+<code>
+SELECT 
+    Product_ID,
+    COUNT(*) AS Duplicate_Count
+FROM staging_sales
+GROUP BY Product_ID
+HAVING COUNT(*) > 1;
+</code>
+</pre>
+
+        </div>
+
+
+        <div class="output-box">
+
+            <h4>Query Result</h4>
+
+            <img src="../images/duplicate_PrimaryKey.png" 
+                 alt="SQL query output">
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- Query Card 02 -->
+    <div class="sql-card">
+
+        <div class="sql-card-header">
+
+            <div>
+                <span class="query-number">02</span>
+                <h3>NULL Value Detection</h3>
+            </div>
+
+            <span class="query-type">Data Cleaning</span>
+
+        </div>
+
+
+        <p class="query-description">
+            Checks missing values that may affect database consistency.
+        </p>
+
+
+        <div class="code-container">
+
+            <div class="code-header">
+                <span>SQL</span>
+            </div>
+
+
+<pre>
+<code>
+SELECT *
+FROM staging_sales
+WHERE Customer_ID IS NULL
+OR Product_ID IS NULL;
+</code>
+</pre>
+
+        </div>
+
+
+        <div class="output-box">
+
+            <h4>Query Result</h4>
+
+            <img src="../images/nullValidation.png" 
+                 alt="SQL null validation result">
+
+        </div>
+
+
+    </div>
+
+</div>
+</section>
+</div>
+
+<!--challenge-section-->
+
+<section class="challenge-section">
+<div class="block">
+
+    <h1>Challenges & Solutions</h1><br>
+
+    <div class="challenge-card">
+
+        <h3>Duplicate Product IDs in Source Dataset</h3><br>
+
+        <p>
+
+            During the ETL process, duplicate Product IDs were identified in the
+            staging dataset. Further investigation revealed that several Product IDs
+            were associated with multiple Product Names, violating the primary key
+            constraint of the Product table.
+
+        </p><br>
+
+        <h4>Solution</h4><br>
+
+        <p>
+
+            Performed data profiling using SQL validation queries and transformed
+            the data by grouping Product IDs before loading them into the normalized
+            Product table. This maintained entity integrity while preserving
+            analytical usability.
+
+        </p>
+
+    </div>
+</div>
+
+</section>
     <!--Technologies-->
 
     <div class="block">
 
-    <h2>Technologies & Skills</h2>
+    <h1>Technologies & Skills</h1>
 
     <p>
         The following tools and concepts were used during the design and documentation
@@ -277,6 +546,8 @@ and Power BI.
 <li>✔ Database Specification</li>
 
 <li>✔ Data Dictionary</li>
+
+<li>✔ ETL Process</li>
 
 <li>🔄 Entity Relationship Design</li>
 
