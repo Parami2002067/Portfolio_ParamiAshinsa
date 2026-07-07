@@ -176,7 +176,7 @@ and Power BI.
                 <th>Column</th>
                 <th>Data Type</th>
                 <th>PK/FK</th>
-                <th>nullable?</th>
+                <th>nullable</th>
                 <th>Description</th>
             </tr>
 
@@ -223,6 +223,158 @@ and Power BI.
                 <td>-</td>
                 <td>No</td>
                 <td>Product’s name</td>
+            </tr>
+            <tr>
+                <td>Product</td>
+                <td>Category</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Category the product belong</td>
+            </tr>
+            <tr>
+                <td>Product</td>
+                <td>Sub_Category</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Sub category the product belong</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Order_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>PK</td>
+                <td>No</td>
+                <td>Unique order identifier</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Order_Date</td>
+                <td>DATE</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Date which the order was placed</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Customer_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>FK</td>
+                <td>No</td>
+                <td>Identify the customer who placed the order</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Country</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Country order is delivered</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Region</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Region order is delivered</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>City</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>City order is delivered</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>State</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>State order is delivered</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Postal_Code</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Postal code order is delivered</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Ship_Date</td>
+                <td>DATE</td>
+                <td>-</td>
+                <td>Yes</td>
+                <td>Shipping date order is delivered</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>Ship_Mode</td>
+                <td>VARCHAR(100)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Shipping mode order is delivered</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>OrderDetail_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>PK</td>
+                <td>No</td>
+                <td>Unique order detail identifier</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>Order_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>FK</td>
+                <td>No</td>
+                <td>Identify the order related to the order detail</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>Product_ID</td>
+                <td>VARCHAR(50)</td>
+                <td>FK</td>
+                <td>No</td>
+                <td>Identify the product belongs to the order</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>Sales</td>
+                <td>DECIMAL(10,2)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Sales amount of the relevant product of the relevant order</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>Quantity</td>
+                <td>INT</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Quantity of the relevant product of the relevant order</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>Discount</td>
+                <td>DECIMAL(5,2)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Discount the customer got</td>
+            </tr>
+            <tr>
+                <td>Order_Detail</td>
+                <td>Profit</td>
+                <td>DECIMAL(10,2)</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Profit of the relevant product of the relevant order</td>
             </tr>
 
         </table>
@@ -458,44 +610,254 @@ OR Product_ID IS NULL;
     </div>
 
 </div>
-</section>
-</div>
 
-<!--challenge-section-->
+<!-- Query Card 02 -->
+    <div class="sql-card">
 
-<section class="challenge-section">
-<div class="block">
+        <div class="sql-card-header">
 
-    <h1>Challenges & Solutions</h1><br>
+            <div>
+                <span class="query-number">01</span>
+                <h3>Check Orders Consistency</h3>
+            </div>
 
-    <div class="challenge-card">
+            <span class="query-type">Check Orders Consistency</span>
 
-        <h3>Duplicate Product IDs in Source Dataset</h3><br>
+        </div>
 
-        <p>
 
-            During the ETL process, duplicate Product IDs were identified in the
-            staging dataset. Further investigation revealed that several Product IDs
-            were associated with multiple Product Names, violating the primary key
-            constraint of the Product table.
-
-        </p><br>
-
-        <h4>Solution</h4><br>
-
-        <p>
-
-            Performed data profiling using SQL validation queries and transformed
-            the data by grouping Product IDs before loading them into the normalized
-            Product table. This maintained entity integrity while preserving
-            analytical usability.
-
+        <p class="query-description">
+           Verifies the duplicated Order_IDs don't have conflicting values.
         </p>
 
+
+        <div class="code-container">
+
+            <div class="code-header">
+                <span>SQL</span>
+            </div>
+
+
+<pre>
+<code>
+SELECT Order_ID,
+	COUNT(DISTINCT Customer_ID) AS Customers,
+    COUNT(DISTINCT Order_Date) AS OrderDates,
+    COUNT(DISTINCT Ship_Date) AS ShipDates,
+    COUNT(DISTINCT Ship_Mode) AS ShipModes,
+    COUNT(DISTINCT Country) AS Countries,
+    COUNT(DISTINCT Region) AS Regions,
+    COUNT(DISTINCT State) AS States,
+    COUNT(DISTINCT City) AS Cities,
+    COUNT(DISTINCT Postal_Code) AS PostalCodes
+    FROM superstore_staging GROUP BY Order_ID
+    HAVING Customers>1
+		OR OrderDates>1
+        OR ShipDates>1
+        OR ShipModes>1
+        OR Countries>1
+        OR Regions>1
+        OR States>1
+        OR Cities>1
+        OR PostalCodes>1;
+</code>
+</pre>
+
+        </div>
+
+
+        <div class="output-box">
+
+            <h4>Query Result</h4>
+
+            <img src="../images/OrderConsistency.png" 
+                 alt="SQL query output">
+
+        </div>
+
+
     </div>
+</section>
 </div>
 
+<!--Data Format Transformation-->
+
+<div class="block">
+
+<section class="sql-validation-section">
+<div class="block">
+        <h2>Data Format Transformation</h2>
+        <p>
+            <b>Issue identified : </b> The raw dataset stored Order_Date and Ship_Date
+            values as text fields, while the database schema required SQL DATE data type.
+        </p><br>
+   
+
+
+    <!-- Query Card 01 -->
+    <div class="sql-card">
+
+        <div class="sql-card-header">
+
+            <div>
+                <h4>Transformation Apllied</h4><br>
+            </div>
+
+        </div>
+        <div class="code-container">
+
+            <div class="code-header">
+                <span>SQL</span>
+            </div>
+
+
+<pre>
+<code>
+INSERT INTO Orders(
+    Order_ID,
+    Order_Date,
+    Customer_ID,
+    Country,
+    Region,
+    City,
+    State,
+    Postal_Code,
+    Ship_Date,
+    Ship_Mode
+)
+SELECT 
+    Order_ID,
+    STR_TO_DATE(MIN(Order_Date), '%m/%d/%Y'),
+    MIN(Customer_ID),
+    MIN(Country),
+    MIN(Region),
+    MIN(City),
+    MIN(State),
+    MIN(Postal_Code),
+    STR_TO_DATE(MIN(Ship_Date), '%m/%d/%Y'),
+    MIN(Ship_Mode)
+FROM superstore_staging
+GROUP BY Order_ID;
+</code>
+</pre>
+</div>
+</div>
+
+<div class="block">
+    <h4>Purpose</h4>
+    <ul>
+        <li>Converted string based dates into SQL compatible DATE formats</li>
+        <li>Ensured successful insertion into Orders table</li>
+        <li>Improved consistency for future date based analysis</li>
+    </ul>
+</div>
+
+        <div class="output-box">
+
+            <h4>Before Transformation</h4>
+
+            <img src="../images/before_OrderDate.png" 
+                 alt="before output">
+
+        </div>
+        <div class="output-box">
+
+            <h4>After Transformation</h4>
+
+            <img src="../images/After_OrderDate.png" 
+                 alt="After output">
+
+        </div>
+
+
+    
+
+<!--challenge-section-->
+<section class="challenges-section">
+<div class="block">
+  <h2>Challenges & Solutions</h2>
+        <p>Key data challenges identified during the ETL process and the solutions implemented.</p>
+    
+
+    <div class="challenge-container">
+
+        <!-- Challenge 1 -->
+        <div class="challenge-card">
+            <div class="challenge-icon">
+                <i class="fa-solid fa-key"></i>
+            </div>
+
+            <div class="challenge-content">
+                <h3>Duplicate Product IDs</h3>
+
+                <h4>Challenge</h4>
+                <p>
+                    Duplicate Product_ID values were identified during data loading,
+                    causing conflicts with primary key requirements in the Product table.
+                </p>
+
+                <h4 class="solution-title">Solution</h4>
+                <p>
+                    Analyzed the source data and redesigned the database structure by
+                    separating product information from transaction records to maintain
+                    normalization and data integrity.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Challenge 2 -->
+        <div class="challenge-card">
+            <div class="challenge-icon">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <div class="challenge-content">
+                <h3>Inconsistent Date Formats</h3>
+
+                <h4>Challenge</h4>
+                <p>
+                    Order_Date and Ship_Date values were stored as text fields,
+                    while the database schema required SQL DATE data types.
+                </p>
+
+                <h4 class="solution-title">Solution</h4>
+                <p>
+                    Applied SQL date transformation using STR_TO_DATE() and validated
+                    converted values before inserting records into the Orders table.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Challenge 3 -->
+        <div class="challenge-card">
+            <div class="challenge-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="challenge-content">
+                <h3>Data Quality Validation</h3>
+
+                <h4>Challenge</h4>
+                <p>
+                    Raw data contained possible issues such as duplicate records,
+                    missing values, and inconsistent relationships.
+                </p>
+
+                <h4 class="solution-title">Solution</h4>
+                <p>
+                    Developed SQL validation queries to detect duplicates, NULL values,
+                    and order consistency issues before loading cleaned data.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 </section>
+
     <!--Technologies-->
 
     <div class="block">
