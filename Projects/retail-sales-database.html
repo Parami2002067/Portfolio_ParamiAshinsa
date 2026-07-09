@@ -458,6 +458,107 @@ and Power BI.
 
 </section>
 
+<!--ETL process flow-->
+
+<section class="etl-section2">
+
+<h2>Data Pipeline Architecture</h2>
+
+<p class="etl-description">
+    The data pipeline transforms raw Superstore data into analytics-ready 
+    relational tables using Python ETL and SQL transformations.
+</p>
+
+
+<div class="vertical-etl-flow">
+
+
+    <div class="etl-card2">
+        <div class="etl-icon">📄</div>
+        <h3>Raw Dataset</h3>
+        <p>
+            Original Superstore CSV containing sales transactions.
+        </p>
+    </div>
+
+
+    <div class="vertical-arrow">↓</div>
+
+
+    <div class="etl-card2">
+        <div class="etl-icon">🧹</div>
+        <h3>Data Cleaning</h3>
+        <p>
+            Handle missing values, formatting issues and data validation.
+        </p>
+    </div>
+
+
+    <div class="vertical-arrow">↓</div>
+
+
+    <div class="etl-card2">
+        <div class="etl-icon">🐍</div>
+        <h3>Python ETL Pipeline</h3>
+        <p>
+            Pandas processes CSV data and MySQL Connector loads records.
+        </p>
+    </div>
+
+
+    <div class="vertical-arrow">↓</div>
+
+
+    <div class="etl-card">
+        <div class="etl-icon">🗄️</div>
+        <h3>Staging Table</h3>
+        <p>
+            Clean dataset stored in MySQL staging layer.
+        </p>
+    </div>
+
+
+    <div class="vertical-arrow">↓</div>
+
+
+    <div class="etl-card">
+        <div class="etl-icon">⚙️</div>
+        <h3>SQL Transformation</h3>
+        <p>
+            Normalize staging data into relational tables.
+        </p>
+    </div>
+
+
+    <div class="vertical-arrow">↓</div>
+
+
+    <div class="database-group">
+
+        <div class="mini-card">👤 Customer</div>
+        <div class="mini-card">📦 Product</div>
+        <div class="mini-card">🛒 Orders</div>
+        <div class="mini-card">🧾 Order Detail</div>
+
+    </div>
+
+
+    <div class="vertical-arrow">↓</div>
+
+
+    <div class="etl-card">
+        <div class="etl-icon">📊</div>
+        <h3>Power BI Dashboard</h3>
+        <p>
+            Business insights and analytical reporting.
+        </p>
+    </div>
+
+
+</div>
+
+</section>
+
 <!--quality-section-->
 
 <section class="quality-section">
@@ -837,18 +938,32 @@ GROUP BY Order_ID;
             </div>
 
             <div class="challenge-content">
-                <h3>Data Quality Validation</h3>
+                <h3>Failed data import attempt</h3>
 
                 <h4>Challenge</h4>
                 <p>
-                    Raw data contained possible issues such as duplicate records,
-                    missing values, and inconsistent relationships.
+                    Initially, I attempted to import the Superstore CSV file directly into MySQL 
+                    using the LOAD DATA LOCAL INFILE command. However, MySQL returned an access 
+                    restriction 
+                    error: LOAD DATA LOCAL INFILE file request rejected due to restrictions on access
+
+                    This prevented direct CSV loading into the staging table.
                 </p>
 
                 <h4 class="solution-title">Solution</h4>
                 <p>
-                    Developed SQL validation queries to detect duplicates, NULL values,
-                    and order consistency issues before loading cleaned data.
+                    Instead of relying on MySQL's local file import feature, I implemented a 
+                    Python-based ETL approach using Pandas and MySQL Connector.
+
+                    The solution workflow was:
+                <ol>
+                    <li>Read the cleaned CSV file using Pandas.</li>
+                    <li>Establish a connection between Python and MySQL.</li>
+                    <li>Insert the dataset into the superstore_staging table programmatically.</li>
+                    <li>Verify the imported records in MySQL.</li>
+                </ol>
+
+                    This approach provided a more flexible and reproducible data loading process.
                 </p>
             </div>
         </div>

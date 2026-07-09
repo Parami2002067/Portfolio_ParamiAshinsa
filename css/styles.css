@@ -1926,6 +1926,180 @@ code {
 
 }
 
+/* ETL Process Section */
+
+.etl-section2 {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+
+.etl-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+
+.etl-description {
+    max-width: 750px;
+    margin: auto;
+    color: #b8b8b8;
+    line-height: 1.6;
+}
+
+
+.etl-flow,
+.etl-final-flow {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.etl-card2 {
+    width: 220px;
+    min-height: 190px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.3s ease;
+}
+
+
+.etl-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.etl-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+
+.etl-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+
+.etl-card p {
+    font-size: 0.9rem;
+    color: #c8c8c8;
+    line-height: 1.5;
+}
+
+
+.arrow {
+    font-size: 35px;
+    color: #00bfff;
+}
+
+
+.down-arrow {
+    font-size: 45px;
+    margin: 25px;
+    color: #00bfff;
+}
+
+
+.database-group {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,120px);
+
+    gap:15px;
+
+}
+
+
+.mini-card {
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background: rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    font-size:0.9rem;
+
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:900px){
+
+    .arrow{
+        transform: rotate(90deg);
+    }
+
+
+    .etl-flow,
+    .etl-final-flow{
+
+        flex-direction:column;
+
+    }
+
+}
+
+.vertical-etl-flow {
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:50px;
+
+}
+
+
+.vertical-arrow {
+
+    font-size:40px;
+    color:#00bfff;
+    margin:15px 0;
+
+}
+
+
+.database-group {
+
+    display:grid;
+    grid-template-columns:repeat(2,150px);
+    gap:15px;
+
+}
+
+
+.mini-card {
+
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+
+    padding:18px;
+
+    border-radius:15px;
+
+    backdrop-filter:blur(10px);
+
+    font-size:0.95rem;
+
+}
+
 /* ==========================
         FOOTER
 ========================== */
