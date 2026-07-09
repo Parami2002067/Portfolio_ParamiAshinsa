@@ -559,6 +559,63 @@ and Power BI.
 
 </section>
 
+<!--Sample Data Population-->
+<div class="block">
+    <h1>Sample Data Population</h1>
+
+    <p>
+        To validate the database design, the normalized tables were populated using the
+        cleaned Superstore dataset.<br>
+
+        The data loading process involved extracting records from the staging table and 
+        inserting them into the corresponding relational tables.
+    </p>
+    <br><h2>Population Workflow</h2><br>
+
+    <div class="vertical-etl-flow">
+    
+        <h3>superstore_staging</h3>
+    
+    <div class="vertical-arrow">↓</div>
+
+    <div class="etl-card">
+    <div class="database-group">
+
+        <div class="mini-card">👤 Customer</div>
+        <div class="mini-card">📦 Product</div>
+        <div class="mini-card">🛒 Orders</div>
+        <div class="mini-card">🧾 Order Detail</div>
+
+    </div>
+    </div>
+    </div>
+
+    <br><h2>Data Population Summery</h2>
+    <table class="ba-table">
+        <tr>
+            <th>Table</th>
+            <th>Rcords</th>
+        </tr>
+        <tr>
+            <td>Customer</td>
+            <td>793</td>
+        </tr>
+        <tr>
+            <td>Product</td>
+            <td>1862</td>
+        </tr>
+        <tr>
+            <td>Orders</td>
+            <td>5009</td>
+        </tr>
+        <tr>
+            <td>Order_Detail</td>
+            <td>9994</td>
+        </tr>
+
+    </table>
+</div>
+
 <!--quality-section-->
 
 <section class="quality-section">
@@ -1028,7 +1085,7 @@ GROUP BY Order_ID;
 
 <li>🔄 Entity Relationship Design</li>
 
-<li>🔄 SQL Table Creation</li>
+<li>✔ SQL Table Creation</li>
 
 <li>🔄 Sample Data Population</li>
 
