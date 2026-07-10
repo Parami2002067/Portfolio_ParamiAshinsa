@@ -614,6 +614,13 @@ and Power BI.
         </tr>
 
     </table>
+
+    <div class="excel-image">
+        <img src="../images/OrdersTablesSample.png"
+             alt="Orders table sample populatoin">
+        <p>Figure : Orders table sample populatoin </p>
+    </div>
+
 </div>
 
 <!--quality-section-->
@@ -927,6 +934,179 @@ GROUP BY Order_ID;
 
         </div>
 
+<!--SQL analytics-->
+
+<section class="sql-analytics" id="sql-analytics">
+
+    <div class="section-header">
+        <h2>SQL Analytics</h2>
+        <p>
+            Explore SQL queries used to extract meaningful business insights from
+            the Retail Sales Analytics database.
+        </p>
+    </div>
+
+
+    <!-- Executive KPI -->
+
+    <div class="analytics-category">
+
+        <h3>📊 Executive KPI Analysis</h3>
+
+        <div class="analytics-grid">
+
+            <div class="query-card">
+
+                <div class="query-icon">💰</div>
+
+                <h4>Total Sales</h4>
+
+                <p>
+                    Calculates the total revenue generated from all orders.
+                </p>
+
+                <button class="query-btn" data-query="totalSales">
+                    Explore Query →
+                </button>
+
+            </div>
+
+
+
+            <div class="query-card">
+
+                <div class="query-icon">📈</div>
+
+                <h4>Total Profit</h4>
+
+                <p>
+                    Calculates the overall business profit.
+                </p>
+
+                <button class="query-btn" data-query="totalProfit">
+                    Explore Query →
+                </button>
+
+            </div>
+
+
+
+            <div class="query-card">
+
+                <div class="query-icon">🛒</div>
+
+                <h4>Average Order Value</h4>
+
+                <p>
+                    Measures the average revenue generated per order.
+                </p>
+
+                <button class="query-btn" data-query="averageOrder">
+                    Explore Query →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Product Analysis -->
+
+    <!--<div class="analytics-category">
+
+        <h3>📦 Product Analysis</h3>
+
+        <div class="analytics-grid">
+
+            <div class="query-card">
+
+                <div class="query-icon">🏆</div>
+
+                <h4>Top Selling Products</h4>
+
+                <p>
+                    Identifies products with the highest sales.
+                </p>
+
+                <button class="query-btn" data-query="topProducts">
+                    Explore Query →
+                </button>
+
+            </div>
+
+
+
+            <div class="query-card">
+
+                <div class="query-icon">📦</div>
+
+                <h4>Category Performance</h4>
+
+                <p>
+                    Compares sales across product categories.
+                </p>
+
+                <button class="query-btn" data-query="categorySales">
+                    Explore Query →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>-->
+
+
+
+    <!-- Customer Analysis -->
+
+    <!--<div class="analytics-category">
+
+        <h3>👥 Customer Analysis</h3>
+
+        <div class="analytics-grid">
+
+            <div class="query-card">
+
+                <div class="query-icon">⭐</div>
+
+                <h4>Top Customers</h4>
+
+                <p>
+                    Finds customers generating the highest sales.
+                </p>
+
+                <button class="query-btn" data-query="topCustomers">
+                    Explore Query →
+                </button>
+
+            </div>
+
+
+
+            <div class="query-card">
+
+                <div class="query-icon">👥</div>
+
+                <h4>Customer Segments</h4>
+
+                <p>
+                    Compares sales across customer segments.
+                </p>
+
+                <button class="query-btn" data-query="segments">
+                    Explore Query →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>-->
 
     
 
@@ -1087,9 +1267,9 @@ GROUP BY Order_ID;
 
 <li>✔ SQL Table Creation</li>
 
-<li>🔄 Sample Data Population</li>
+<li>✔ Sample Data Population</li>
 
-<li>⏳ SQL Queries</li>
+<li>✔ SQL Queries</li>
 
 <li>⏳ Power BI Dashboard</li>
 
@@ -1129,6 +1309,25 @@ GROUP BY Order_ID;
     </div>
 
 </footer>
+
+<!-- SQL Analytics Modal -->
+
+<div id="sqlModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <div id="modalBody">
+
+            <!-- JavaScript will load content here -->
+
+        </div>
+
+    </div>
+
+</div>
+<script src="../JavaScript/script.js"></script>
 
 </body>
 </html>
