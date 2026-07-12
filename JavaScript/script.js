@@ -212,6 +212,89 @@ FROM (
     insight:
     "This query calculates the average value of each customer order by first summing the sales for every order and then averaging those totals. Monitoring Average Order Value helps businesses evaluate customer purchasing behavior and identify opportunities to increase revenue through cross-selling, upselling, and promotional strategies."
 
+},
+
+topProducts: {
+
+    title: "🏆 Highest Selling Product",
+
+    question:
+    "Which product generated the highest total sales revenue?",
+
+    sql:
+`SELECT
+    p.Product_Name,
+    ROUND(SUM(od.Sales), 2) AS Total_Sales
+FROM order_detail od
+JOIN product p
+    ON od.Product_ID = p.Product_ID
+GROUP BY
+    p.Product_Name,
+    p.Product_ID 
+ORDER BY
+    Total_Sales DESC
+LIMIT 1;`,
+
+    image:
+    "../images/sql/highest-selling-product.png",
+
+    insight:
+    "This query identifies the product that generated the highest total sales revenue. It helps businesses recognize their best-performing products, optimize inventory planning, and develop targeted marketing strategies around high-demand items."
+
+},
+
+categorySales: {
+
+    title: "📦 Sales by Category",
+
+    question:
+    "Which product categories generate the highest total sales revenue?",
+
+    sql:
+`SELECT
+    p.Category,
+    ROUND(SUM(od.Sales), 2) AS Total_Sales
+FROM order_detail od
+JOIN product p
+    ON od.Product_ID = p.Product_ID
+GROUP BY
+    p.Category
+ORDER BY
+    Total_Sales DESC;`,
+
+    image:
+    "../images/sql/sales-by-category.png",
+
+    insight:
+    "This query calculates the total sales revenue for each product category. It enables businesses to identify high-performing categories, allocate inventory effectively, and prioritize marketing efforts toward the segments that contribute the most revenue."
+
+},
+
+salesByRegion: {
+
+    title: "🌍 Sales by Region",
+
+    question:
+    "Which regions generate the highest total sales revenue?",
+
+    sql:
+`SELECT
+    o.Region,
+    ROUND(SUM(od.Sales), 2) AS Total_Sales
+FROM order_detail od
+JOIN orders o
+    ON od.Order_ID = o.Order_ID
+GROUP BY
+    o.Region
+ORDER BY
+    Total_Sales DESC;`,
+
+    image:
+    "../images/sql/sales-by-region.png",
+
+    insight:
+    "This query summarizes total sales revenue across different regions. It enables businesses to identify high-performing markets, optimize regional sales strategies, allocate resources effectively, and support data-driven expansion decisions."
+
 }
 
 };
