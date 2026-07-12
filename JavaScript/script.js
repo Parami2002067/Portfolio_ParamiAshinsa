@@ -295,7 +295,70 @@ ORDER BY
     insight:
     "This query summarizes total sales revenue across different regions. It enables businesses to identify high-performing markets, optimize regional sales strategies, allocate resources effectively, and support data-driven expansion decisions."
 
-}
+},
+
+topCustomers: {
+
+    title: "🏆 Top Customers by Revenue",
+
+    question:
+    "Which customers generated the highest total sales revenue?",
+
+    sql:
+`SELECT
+    c.Customer_ID,
+    c.Customer_Name,
+    ROUND(SUM(od.Sales), 2) AS Total_Sales
+FROM customer c
+JOIN orders o
+    ON c.Customer_ID = o.Customer_ID
+JOIN order_detail od
+    ON o.Order_ID = od.Order_ID
+GROUP BY
+    c.Customer_ID,
+    c.Customer_Name
+ORDER BY
+    Total_Sales DESC
+LIMIT 10;`,
+
+    image:
+    "../images/sql/top-customers.png",
+
+    insight:
+    "This query identifies the customers who contribute the highest sales revenue. Understanding top customers enables businesses to strengthen customer relationships, design loyalty programs, personalize marketing campaigns, and focus retention efforts on high-value customers."
+
+},
+
+segments: {
+
+    title: "🏆 Sales across customer segments",
+
+    question:
+    "Which customer segment generated the highest total sales revenue?",
+
+    sql:
+`SELECT
+    c.Segment,
+    ROUND(SUM(od.Sales), 2) AS Total_Sales
+FROM customer c
+JOIN orders o
+    ON c.Customer_ID = o.Customer_ID
+JOIN order_detail od
+    ON o.Order_ID = od.Order_ID
+GROUP BY
+    c.Segment
+ORDER BY
+    Total_Sales DESC;`,
+
+    image:
+    "../images/sql/customer-segment.png",
+
+    insight:
+    "This query summarizes total sales revenue across different customer segments."
+
+},
+
+
 
 };
 
