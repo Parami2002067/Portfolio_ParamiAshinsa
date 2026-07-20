@@ -3078,3 +3078,162 @@ copyright{
 }
 
 }
+
+/* ================================
+   Technology Career Taxonomy
+================================ */
+
+.taxonomy-section{
+
+    max-width:1000px;
+    margin:80px auto;
+    padding:0 20px;
+
+}
+
+.taxonomy-section h2{
+
+    text-align:center;
+    margin-bottom:20px;
+
+}
+
+.taxonomy-description{
+
+    max-width:850px;
+    margin:0 auto 40px;
+    text-align:center;
+    line-height:1.8;
+    color:#cbd5e1;
+
+}
+
+/* Stats */
+
+.taxonomy-stats{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    margin-bottom:45px;
+
+}
+
+.taxonomy-stat{
+
+    background: rgba(16,22,47,0.7);
+    backdrop-filter:blur(15px);
+
+    border-radius:18px;
+
+    padding:20px 35px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.taxonomy-stat h3{
+
+    color:#3b82f6;
+    font-size:2rem;
+    text-align:center;
+
+}
+
+.taxonomy-arrow{
+
+    font-size:2rem;
+    color:#3b82f6;
+
+}
+
+/* Accordion */
+
+.accordion{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.accordion details{
+
+    background: rgba(16,22,47,0.7);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    overflow:hidden;
+
+}
+
+.accordion summary{
+
+    padding:20px 25px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    color:white;
+
+    list-style:none;
+
+}
+
+.accordion summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.accordion summary::after{
+
+    content:"+";
+    float:right;
+    font-size:22px;
+
+}
+
+.accordion details[open] summary::after{
+
+    content:"−";
+
+}
+
+.accordion ul{
+
+    padding:0 35px 20px;
+
+    color:#cbd5e1;
+
+}
+
+.accordion li{
+
+    margin-bottom:10px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.taxonomy-stats{
+
+    flex-direction:column;
+
+}
+
+.taxonomy-arrow{
+
+    transform:rotate(90deg);
+
+}
+
+}
