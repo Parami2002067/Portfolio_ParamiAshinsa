@@ -3206,6 +3206,14 @@ copyright{
 
 }
 
+.accordion details[open]{
+
+    border-color:#3b82f6;
+
+    box-shadow:0 0 20px rgba(59,130,246,.18);
+
+}
+
 .accordion ul{
 
     padding:0 35px 20px;
@@ -3220,23 +3228,6 @@ copyright{
 
 }
 
-/* Mobile */
-
-@media(max-width:768px){
-
-.taxonomy-stats{
-
-    flex-direction:column;
-
-}
-
-.taxonomy-arrow{
-
-    transform:rotate(90deg);
-
-}
-
-}
 
 /* ================================
    Mobile Responsive
