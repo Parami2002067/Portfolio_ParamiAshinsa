@@ -3237,3 +3237,92 @@ copyright{
 }
 
 }
+
+/* ================================
+   Mobile Responsive
+================================ */
+
+@media (max-width: 768px) {
+
+    .taxonomy-section {
+        padding: 0 15px;
+        margin: 50px auto;
+    }
+
+    .taxonomy-section h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .taxonomy-description {
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    /* Statistics */
+
+    .taxonomy-stats {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .taxonomy-stat {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .taxonomy-stat h3 {
+        font-size: 1.8rem;
+    }
+
+    .taxonomy-arrow {
+        transform: rotate(90deg);
+        font-size: 28px;
+    }
+
+    /* Accordion */
+
+    .accordion {
+        gap: 15px;
+    }
+
+    .accordion summary {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 18px 20px;
+
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .accordion summary::after {
+
+        position: static;
+        margin-left: 15px;
+
+        flex-shrink: 0;
+
+        font-size: 22px;
+
+    }
+
+    .accordion ul {
+
+        padding: 0 20px 18px 35px;
+
+    }
+
+    .accordion li {
+
+        font-size: 14px;
+        line-height: 1.7;
+
+    }
+
+}
