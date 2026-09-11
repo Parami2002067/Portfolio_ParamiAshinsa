@@ -4235,3 +4235,622 @@ copyright{
         font-size: 22px;
     }
 }
+
+/* =========================================================
+   CAREERLENS - TECHNOLOGY MARKET ANALYSIS
+========================================================= */
+
+.market-analysis-section,
+.skill-extraction-section,
+.validation-section,
+.skill-demand-section,
+.market-insight-section,
+.next-analysis {
+    padding: 90px 8%;
+    position: relative;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #60a5fa;
+}
+
+.section-title {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #ffffff;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.section-title p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   MARKET STAT CARDS
+========================================================= */
+
+.market-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.market-stat-card {
+    padding: 30px 22px;
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.58);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 20px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    transition: all 0.3s ease;
+}
+
+.market-stat-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(59, 130, 246, 0.45);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.38),
+        0 0 28px rgba(59, 130, 246, 0.12);
+}
+
+.market-stat-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.market-stat-card h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.market-stat-card p {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SKILL EXTRACTION SECTION
+========================================================= */
+
+.skill-extraction-section {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(59, 130, 246, 0.08),
+            transparent 35%
+        );
+}
+
+.analysis-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.analysis-text {
+    max-width: 850px;
+    margin-bottom: 45px;
+}
+
+.analysis-text h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.analysis-text p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.method-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.method-tags span {
+    padding: 9px 14px;
+    border-radius: 999px;
+
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+
+    color: #bfdbfe;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EXTRACTION FLOW
+========================================================= */
+
+.extraction-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.flow-item {
+    padding: 25px 20px;
+
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transition: all 0.3s ease;
+}
+
+.flow-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.flow-item > span {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: #60a5fa;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.flow-item h4 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.flow-item p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #3b82f6;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   VALIDATION CARDS
+========================================================= */
+
+.validation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.validation-card {
+    padding: 28px 22px;
+
+    background: rgba(15, 23, 42, 0.58);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 20px;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    transition: all 0.3s ease;
+}
+
+.validation-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.validation-card span {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #93c5fd;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.validation-card h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.validation-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.highlight-card {
+    border-color: rgba(59, 130, 246, 0.45);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(59, 130, 246, 0.14),
+            rgba(15, 23, 42, 0.72)
+        );
+
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.11);
+}
+
+.method-note {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 18px 20px;
+
+    background: rgba(30, 41, 59, 0.48);
+    border-left: 3px solid #3b82f6;
+    border-radius: 12px;
+
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TOP SKILL CARDS
+========================================================= */
+
+.top-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.top-skill-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 32px 25px;
+
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 22px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition: all 0.3s ease;
+}
+
+.top-skill-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(59, 130, 246, 0.48);
+}
+
+.rank-one {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.18),
+            rgba(15, 23, 42, 0.7)
+        );
+
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.12);
+}
+
+.skill-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+
+    color: #60a5fa;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.top-skill-card h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.top-skill-card strong {
+    display: block;
+
+    color: #60a5fa;
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.top-skill-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   SKILL RANKING LIST
+========================================================= */
+
+.skill-ranking {
+    max-width: 900px;
+    margin: 0 auto;
+
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(148, 163, 184, 0.13);
+    border-radius: 20px;
+
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+
+    transition: background 0.25s ease;
+}
+
+.skill-row:last-child {
+    border-bottom: none;
+}
+
+.skill-row:hover {
+    background: rgba(59, 130, 246, 0.06);
+}
+
+.skill-row span {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.skill-row strong {
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MARKET INSIGHT SECTION
+========================================================= */
+
+.insight-card {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.12),
+            rgba(15, 23, 42, 0.72)
+        );
+
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    border-radius: 24px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 35px rgba(59, 130, 246, 0.08);
+}
+
+.insight-card h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.insight-card p {
+    color: #cbd5e1;
+    line-height: 1.85;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   NEXT ANALYSIS SECTION
+========================================================= */
+
+.next-analysis {
+    max-width: 1000px;
+    margin: 50px auto 90px;
+    padding: 38px 30px;
+
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.42);
+    border: 1px dashed rgba(96, 165, 250, 0.35);
+    border-radius: 22px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.next-analysis > span {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: #60a5fa;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.next-analysis h2 {
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.next-analysis p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .market-stats,
+    .validation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .extraction-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-arrow {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .market-analysis-section,
+    .skill-extraction-section,
+    .validation-section,
+    .skill-demand-section,
+    .market-insight-section,
+    .next-analysis {
+        padding: 70px 6%;
+    }
+
+    .market-stats,
+    .validation-grid,
+    .top-skills-grid,
+    .extraction-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2,
+    .analysis-text h2 {
+        font-size: 2rem;
+    }
+
+    .market-stat-card,
+    .validation-card,
+    .top-skill-card {
+        padding: 24px 20px;
+    }
+
+    .insight-card {
+        padding: 30px 22px;
+    }
+
+    .skill-row {
+        padding: 16px 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .market-analysis-section,
+    .skill-extraction-section,
+    .validation-section,
+    .skill-demand-section,
+    .market-insight-section {
+        padding: 55px 5%;
+    }
+
+    .market-stat-card h3,
+    .validation-card h3,
+    .top-skill-card strong {
+        font-size: 1.7rem;
+    }
+
+    .method-tags {
+        gap: 8px;
+    }
+
+    .method-tags span {
+        font-size: 0.78rem;
+        padding: 8px 11px;
+    }
+
+    .skill-row {
+        gap: 15px;
+    }
+
+    .skill-row span {
+        font-size: 0.9rem;
+    }
+
+    .skill-row strong {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .next-analysis {
+        margin: 35px 5% 70px;
+        padding: 30px 20px;
+    }
+}
