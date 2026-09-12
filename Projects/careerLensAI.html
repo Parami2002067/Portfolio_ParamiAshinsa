@@ -94,6 +94,339 @@
          
     </div>
 
+    <!-- =========================
+     CAREERLENS SYSTEM PROTOTYPE
+========================= -->
+
+<section class="careerlens-prototype-section">
+
+    <div class="prototype-section-heading">
+
+        <span class="prototype-label">
+            FROM CONCEPT TO PRODUCT
+        </span>
+
+        <h2>CareerLens AI System Prototype</h2>
+
+        <p>
+            After defining the CareerLens user journey and building the
+            initial career intelligence foundation, I translated the planned
+            workflow into a high-fidelity web prototype.
+        </p>
+
+        <p>
+            The prototype demonstrates how users will select a target career,
+            build their skill profile, complete career analysis, and explore
+            personalized career insights.
+        </p>
+
+        <div class="prototype-status">
+            <i class="fas fa-layer-group"></i>
+            High-Fidelity Prototype
+            <span></span>
+            Working Application In Development
+        </div>
+
+    </div>
+
+
+    <!-- Prototype navigation -->
+    <div class="prototype-tabs">
+
+        <button
+            class="prototype-tab active"
+            data-prototype="overview"
+            type="button"
+        >
+            <span>01</span>
+            Overview
+        </button>
+
+        <button
+            class="prototype-tab"
+            data-prototype="career"
+            type="button"
+        >
+            <span>02</span>
+            Choose Career
+        </button>
+
+        <button
+            class="prototype-tab"
+            data-prototype="skills"
+            type="button"
+        >
+            <span>03</span>
+            Your Skills
+        </button>
+
+        <button
+            class="prototype-tab"
+            data-prototype="analysis"
+            type="button"
+        >
+            <span>04</span>
+            Career Analysis
+        </button>
+
+        <button
+            class="prototype-tab"
+            data-prototype="results"
+            type="button"
+        >
+            <span>05</span>
+            Results
+        </button>
+
+    </div>
+
+
+    <!-- Main prototype viewer -->
+    <div class="prototype-showcase">
+
+        <div class="prototype-main-image">
+
+            <img
+                id="careerPrototypeImage"
+                src="../images/careerlens/careerlens-overview.png"
+                alt="CareerLens AI landing page prototype"
+            >
+
+        </div>
+
+
+        <div class="prototype-details-panel">
+
+            <div class="prototype-step">
+                <span id="prototypeStep">01</span>
+                PRODUCT EXPERIENCE
+            </div>
+
+            <h3 id="prototypeTitle">
+                CareerLens AI Platform Overview
+            </h3>
+
+            <p id="prototypeDescription">
+                Introduces the CareerLens AI platform and communicates
+                its core purpose: helping users understand career
+                alignment, skill gaps, learning priorities, and
+                alternative technology career paths.
+            </p>
+
+            <div
+                class="prototype-feature-list"
+                id="prototypeFeatures"
+            >
+
+                <span>
+                    <i class="fas fa-compass"></i>
+                    Career Intelligence
+                </span>
+
+                <span>
+                    <i class="fas fa-chart-line"></i>
+                    Market Insights
+                </span>
+
+                <span>
+                    <i class="fas fa-route"></i>
+                    Guided User Journey
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Journey summary -->
+    <div class="prototype-flow">
+
+        <div class="prototype-flow-step">
+            <span>01</span>
+
+            <div>
+                <h4>Select Target Career</h4>
+                <p>
+                    Choose the technology role the user wants
+                    CareerLens to evaluate.
+                </p>
+            </div>
+        </div>
+
+        <div class="prototype-flow-arrow">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+
+        <div class="prototype-flow-step">
+            <span>02</span>
+
+            <div>
+                <h4>Build Skill Profile</h4>
+                <p>
+                    Add current skills manually or review skills
+                    identified from a resume.
+                </p>
+            </div>
+        </div>
+
+        <div class="prototype-flow-arrow">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+
+        <div class="prototype-flow-step">
+            <span>03</span>
+
+            <div>
+                <h4>Career Analysis</h4>
+                <p>
+                    Compare the standardized user profile against
+                    career-specific requirements.
+                </p>
+            </div>
+        </div>
+
+        <div class="prototype-flow-arrow">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+
+        <div class="prototype-flow-step">
+            <span>04</span>
+
+            <div>
+                <h4>Career Intelligence</h4>
+                <p>
+                    Present career alignment, skill gaps, learning
+                    priorities, and related career paths.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Product design decisions -->
+    <div class="prototype-design-decisions">
+
+        <div class="prototype-decision-heading">
+
+            <div class="prototype-decision-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <div>
+                <span>PRODUCT DESIGN THINKING</span>
+                <h3>Key Design Decisions</h3>
+            </div>
+
+        </div>
+
+
+        <div class="prototype-decision-grid">
+
+            <div class="prototype-decision-card">
+
+                <i class="fas fa-user-check"></i>
+
+                <div>
+                    <h4>User Control</h4>
+
+                    <p>
+                        Resume-extracted skills are reviewed and editable
+                        before they are used for career analysis.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="prototype-decision-card">
+
+                <i class="fas fa-eye"></i>
+
+                <div>
+                    <h4>Analysis Transparency</h4>
+
+                    <p>
+                        The interface explains how the user's profile
+                        moves through standardization, comparison,
+                        skill-gap analysis, and recommendation stages.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="prototype-decision-card">
+
+                <i class="fas fa-bullseye"></i>
+
+                <div>
+                    <h4>Career-Specific Analysis</h4>
+
+                    <p>
+                        Users are evaluated against their selected
+                        technology career rather than a generic
+                        technology skill profile.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="prototype-decision-card">
+
+                <i class="fas fa-road"></i>
+
+                <div>
+                    <h4>Actionable Results</h4>
+
+                    <p>
+                        Results are designed to move beyond insight by
+                        guiding users toward skill priorities,
+                        learning pathways, and alternative careers.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Prototype note -->
+    <div class="prototype-note">
+
+        <div class="prototype-note-icon">
+            <i class="fas fa-circle-info"></i>
+        </div>
+
+        <div>
+
+            <h4>Prototype Status</h4>
+
+            <p>
+                This high-fidelity prototype represents the planned
+                CareerLens AI user experience and will guide development
+                of the working web application.
+            </p>
+
+            <p>
+                Career-specific scoring, skill-gap ranking,
+                learning-roadmap generation, resume-based skill extraction,
+                and alternative-career recommendation logic are currently
+                under development. Values shown within the prototype
+                screens are illustrative.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
     
 
     <!-- Current Development Status -->
@@ -150,6 +483,8 @@
         </p>
 
     </div>
+
+    <script src="../JavaScript/script.js"></script>
 
 </footer>
 

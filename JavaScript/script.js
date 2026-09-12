@@ -451,3 +451,241 @@ window.onclick = function(event){
 
 
 });
+
+/* =========================================================
+   CAREERLENS PROTOTYPE SHOWCASE
+========================================================= */
+
+const prototypeTabs =
+    document.querySelectorAll(".prototype-tab");
+
+const prototypeImage =
+    document.getElementById("careerPrototypeImage");
+
+const prototypeStep =
+    document.getElementById("prototypeStep");
+
+const prototypeTitle =
+    document.getElementById("prototypeTitle");
+
+const prototypeDescription =
+    document.getElementById("prototypeDescription");
+
+const prototypeFeatures =
+    document.getElementById("prototypeFeatures");
+
+
+const careerPrototypeData = {
+
+    overview: {
+
+        step: "01",
+
+        image:
+            "../images/careerlens/careerlens-overview.png",
+
+        alt:
+            "CareerLens AI platform landing page prototype",
+
+        title:
+            "CareerLens AI Platform Overview",
+
+        description:
+            "Introduces the CareerLens AI platform and communicates its core purpose: helping users understand career alignment, skill gaps, learning priorities, and alternative technology career paths.",
+
+        features: [
+            ["fa-compass", "Career Intelligence"],
+            ["fa-chart-line", "Market Insights"],
+            ["fa-route", "Guided User Journey"]
+        ]
+
+    },
+
+
+    career: {
+
+        step: "02",
+
+        image:
+            "../images/careerlens/careerlens-career-selection.png",
+
+        alt:
+            "CareerLens target career selection prototype",
+
+        title:
+            "Choose a Target Career",
+
+        description:
+            "Users explore CareerLens technology domains and select one target career. This establishes the career-specific context used throughout the remaining analysis workflow.",
+
+        features: [
+            ["fa-search", "Career Discovery"],
+            ["fa-layer-group", "Career Domains"],
+            ["fa-bullseye", "Target Selection"]
+        ]
+
+    },
+
+
+    skills: {
+
+        step: "03",
+
+        image:
+            "../images/careerlens/careerlens-skills.png",
+
+        alt:
+            "CareerLens skill profile creation prototype",
+
+        title:
+            "Build Your Skill Profile",
+
+        description:
+            "Users can manually add current skills or upload a resume. Extracted skills remain editable so the user can review and control the final skill profile used during career analysis.",
+
+        features: [
+            ["fa-keyboard", "Manual Skill Entry"],
+            ["fa-file-arrow-up", "Resume Upload"],
+            ["fa-user-check", "User Review"]
+        ]
+
+    },
+
+
+    analysis: {
+
+        step: "04",
+
+        image:
+            "../images/careerlens/careerlens-analysis.png",
+
+        alt:
+            "CareerLens career analysis workflow prototype",
+
+        title:
+            "Career Analysis Workflow",
+
+        description:
+            "The prototype visualizes the planned analysis pipeline: standardize the user's profile, load career requirements, compare skills, identify potential gaps, and prepare recommendations.",
+
+        features: [
+            ["fa-gears", "Skill Standardization"],
+            ["fa-code-compare", "Profile Comparison"],
+            ["fa-magnifying-glass-chart", "Gap Analysis"]
+        ]
+
+    },
+
+
+    results: {
+
+        step: "05",
+
+        image:
+            "../images/careerlens/careerlens-results.png",
+
+        alt:
+            "CareerLens career intelligence results dashboard prototype",
+
+        title:
+            "Career Intelligence Results",
+
+        description:
+            "The results experience demonstrates how CareerLens will bring together career alignment, matched skills, potential skill gaps, learning priorities, roadmap guidance, and alternative career suggestions.",
+
+        features: [
+            ["fa-chart-pie", "Career Alignment"],
+            ["fa-route", "Learning Roadmap"],
+            ["fa-arrows-split-up-and-left", "Alternative Careers"]
+        ]
+
+    }
+
+};
+
+
+if (
+    prototypeTabs.length > 0 &&
+    prototypeImage &&
+    prototypeStep &&
+    prototypeTitle &&
+    prototypeDescription &&
+    prototypeFeatures
+) {
+
+    prototypeTabs.forEach(tab => {
+
+        tab.addEventListener("click", function () {
+
+            const selectedPrototype =
+                this.dataset.prototype;
+
+            const data =
+                careerPrototypeData[selectedPrototype];
+
+            if (!data) return;
+
+
+            /* Active tab */
+            prototypeTabs.forEach(item =>
+                item.classList.remove("active")
+            );
+
+            this.classList.add("active");
+
+
+            /* Fade image */
+            prototypeImage.classList.add(
+                "prototype-image-changing"
+            );
+
+
+            setTimeout(() => {
+
+                prototypeImage.src =
+                    data.image;
+
+                prototypeImage.alt =
+                    data.alt;
+
+                prototypeStep.textContent =
+                    data.step;
+
+                prototypeTitle.textContent =
+                    data.title;
+
+                prototypeDescription.textContent =
+                    data.description;
+
+
+                /* Update feature chips */
+                prototypeFeatures.innerHTML = "";
+
+                data.features.forEach(feature => {
+
+                    const featureChip =
+                        document.createElement("span");
+
+                    featureChip.innerHTML = `
+                        <i class="fas ${feature[0]}"></i>
+                        ${feature[1]}
+                    `;
+
+                    prototypeFeatures.appendChild(
+                        featureChip
+                    );
+
+                });
+
+
+                prototypeImage.classList.remove(
+                    "prototype-image-changing"
+                );
+
+            }, 220);
+
+        });
+
+    });
+
+}
