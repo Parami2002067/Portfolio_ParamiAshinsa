@@ -1,124 +1,20 @@
-Personal Portfolio Website
+🌐 Personal Portfolio Website
 
-Welcome to my personal portfolio. I am Parami Ashinsa, an ICT undergraduate and aspiring Business Analyst and Data Analyst based in Kandy, Sri Lanka.
+This is my personal portfolio website created as an ICT undergraduate and aspiring Business Analyst and Data Analyst.
 
-This portfolio showcases my work across business analysis, data analytics, database design, web development, UI/UX thinking, and graphic design. It brings together project case studies, technical documentation, dashboards, certifications, and leadership experience as I continue building my professional career in technology.
+It showcases my skills, projects, case studies, certifications, creative work, and leadership experience across Business Analysis, Data Analysis, Database Design, Web Development, and UI/UX Design.
 
-Live Portfolio
+🚀 Live Demo
 
-View the live website
+View My Personal Portfolio
 
-About the Portfolio
+👩‍💻 About Me
 
-The website is designed to present not only the final outcomes of my projects, but also the thinking and processes behind them. Project pages include areas such as problem identification, stakeholder analysis, requirements, data preparation, system modelling, database design, analytics, and visual presentation.
+I am Parami Ashinsa, an ICT undergraduate based in Kandy, Sri Lanka. I am passionate about analyzing business problems, working with data, documenting system requirements, and designing practical digital solutions.
 
-Featured Projects
+My current career focus is on Business Analysis and Data Analysis, supported by skills in web development, database management, data visualization, and digital design.
 
-CareerLens AI – Career Intelligence Platform
-
-An AI-powered career guidance platform in development that analyzes large-scale technology job-market data to help students, graduates, and entry-level IT professionals understand career opportunities and industry skill requirements.
-
-The project covers:
-
-Business problem and stakeholder analysis
-
-User journey and business questions
-
-Functional and non-functional requirements
-
-Technology-career taxonomy development
-
-Python-based data exploration and preparation
-
-Career trends and skill-demand analysis
-
-Planned career-match scores, skill-gap analysis, learning roadmaps, and alternative career recommendations
-
-Retail Sales Analytics Database
-
-An end-to-end retail analytics project developed using Python, MySQL, SQL, and Power BI.
-
-The case study includes:
-
-Data extraction, validation, transformation, and loading
-
-Relational database design and normalization
-
-ERD, constraints, and a detailed data dictionary
-
-SQL-based business analysis and validation queries
-
-Product, customer, regional, and executive KPI analysis
-
-Interactive Power BI dashboards
-
-Documentation of technical challenges and solutions
-
-Camera Rental Management System – BA Case Study
-
-A detailed business-analysis case study for digitizing a manual camera-equipment rental process.
-
-It includes:
-
-Executive summary and problem definition
-
-Stakeholder analysis
-
-Functional and non-functional requirements
-
-Business rules and user stories
-
-Use-case diagrams and specifications
-
-Activity diagrams and ERD
-
-UI/UX prototypes for the proposed system
-
-Other Projects
-
-Portfolio Website – Responsive personal portfolio with modern UI styling and animations
-
-Camera Rental Website – Frontend website for browsing camera-rental services and equipment
-
-Beauty Bridal Website – Frontend e-commerce concept for bridal clothing, accessories, and footwear
-
-Excel Mini Projects – Dashboards, trackers, and financial/data-analysis exercises
-
-Creative Portfolio – Branding, promotional graphics, and social-media designs created with Adobe Photoshop and Canva
-
-Skills Demonstrated
-
-Business Analysis
-
-Requirement gathering and documentation
-
-Stakeholder analysis
-
-Business rules and user stories
-
-Use-case and activity modelling
-
-Process and problem analysis
-
-UML and system documentation
-
-Data and Analytics
-
-Python and pandas
-
-SQL and MySQL
-
-Microsoft Excel
-
-Power BI
-
-Data cleaning and transformation
-
-Data modelling and visualization
-
-Exploratory and business-focused data analysis
-
-Web Development
+🛠️ Tech Stack
 
 HTML5
 
@@ -126,11 +22,31 @@ CSS3
 
 JavaScript
 
-Responsive web design
+Font Awesome
 
 Git and GitHub
 
-Design
+GitHub Pages
+
+📊 Tools and Skills
+
+Business Analysis and Requirements Documentation
+
+Stakeholder Analysis
+
+Business Rules and User Stories
+
+Use Case and Activity Diagrams
+
+SQL and MySQL
+
+Python and pandas
+
+Microsoft Excel
+
+Power BI
+
+Data Cleaning and Visualization
 
 Figma
 
@@ -138,73 +54,110 @@ Adobe Photoshop
 
 Canva
 
-UI/UX thinking
+UI/UX Thinking
 
-Branding and visual communication
+📌 Features
 
-Website Features
-
-Responsive, modern user interface
+Responsive modern UI design
 
 Animated hero section and interactive elements
 
-Dedicated project and case-study pages
+Dedicated Business Analysis case studies
 
-Structured BA and data-analysis documentation
+Data Analysis and database project documentation
 
-Project metrics, diagrams, dashboards, and prototypes
+CareerLens AI project journey
 
-Skills, certifications, leadership, and recognition sections
+SQL queries, ETL process, and Power BI dashboard showcase
 
-Creative-work gallery
+Excel mini-project collection
 
-Clear navigation across desktop and mobile devices
+UI/UX prototypes and system diagrams
 
-Tech Stack
+Certifications and leadership sections
 
-Frontend: HTML5, CSS3, JavaScript
+Creative design portfolio
 
-Icons: Font Awesome
+Clean desktop and mobile navigation
 
-Version Control: Git and GitHub
-
-Deployment: GitHub Pages
-
-Project Structure
+📁 Project Structure
 
 Portfolio_ParamiAshinsa/
 ├── index.html
 ├── styles.css
 ├── script.js
 ├── Projects/
+│   ├── portfolio-website.html
+│   ├── camera-rental.html
+│   ├── retail-sales-database.html
 │   ├── careerLensAI.html
 │   ├── careerlens-ba.html
 │   ├── careerlens-data.html
-│   ├── retail-sales-database.html
-│   └── other project case-study pages
+│   ├── beautyBridal-website.html
+│   ├── excel-projects.html
+│   ├── cameraRental-website.html
+│   └── creative-portfolio.html
 ├── images/
 ├── Certificates/
 └── CV.pdf
 
-Certifications and Leadership
+📂 Project Highlights
 
-The portfolio also highlights certifications in business analysis, data science and analytics, artificial intelligence, project management, Python, web design, and business communication.
+🤖 CareerLens AI – Career Intelligence Platform
 
-My leadership experience includes serving as Chairperson and Co-Chairperson for Rotaract Club of Rajarata projects and contributing to collaborative academic projects.
+An AI-powered career guidance platform currently under development. It analyzes large-scale technology job-market data to identify career trends, in-demand skills, skill gaps, and personalized learning pathways for IT students and entry-level professionals.
 
-Run Locally
+The portfolio documents both the Business Analysis journey and the Data Analysis journey of the project.
 
-Clone the repository:
+🛒 Retail Sales Analytics Database
 
-git clone https://github.com/Parami2002067/Portfolio_ParamiAshinsa.git
+An end-to-end retail analytics project developed using Python, MySQL, SQL, and Power BI. It includes data cleaning, ETL, relational database design, normalization, data validation, SQL business queries, and interactive dashboards.
 
-Open the project folder:
+📷 Camera Rental Management System
 
-cd Portfolio_ParamiAshinsa
+A complete Business Analysis case study for transforming a manual camera-rental process into a digital system. It includes stakeholder analysis, requirements, business rules, user stories, use cases, activity diagrams, an ERD, and UI prototypes.
 
-Open index.html in a web browser, or run the project using a local development server such as the VS Code Live Server extension.
+🌐 Portfolio Website
 
-Contact
+A responsive frontend project developed using HTML, CSS, and JavaScript to present my skills, experience, project documentation, and creative work.
+
+📈 Excel Mini Projects
+
+A collection of Excel-based data-analysis projects, including dashboards, tracking systems, and financial models.
+
+💻 Other Projects
+
+Camera Rental Website
+
+Beauty Bridal Website
+
+Creative Design Portfolio
+
+🏅 Certifications
+
+Business Analysis – Foundation
+
+Data Science and Analytics
+
+Business Communication
+
+Introduction to Artificial Intelligence
+
+Foundations of Project Management
+
+Python for Beginners
+
+Web Design for Beginners
+
+🤝 Leadership Experience
+
+Chairperson – Magnetic Minds Project, Rotaract Club of Rajarata
+
+Co-Chairperson – Chayabiwandana Poson Project, Rotaract Club of Rajarata
+
+Experience in team coordination, project planning, and collaborative academic work
+
+📬 Contact
 
 LinkedIn: linkedin.com/in/paramiashinsa
 
@@ -212,8 +165,6 @@ GitHub: github.com/Parami2002067
 
 Email: ashinsaparami2002@gmail.com
 
-Project Status
+📌 Note
 
-This portfolio is continuously updated as I develop new projects, strengthen my analytical and technical skills, and document my learning journey.
-
-If you find my work interesting, feel free to explore the projects or connect with me on LinkedIn.
+This portfolio is continuously updated as I complete new projects, strengthen my technical and analytical skills, and continue my journey toward becoming a Business Analyst and Data Analyst.
